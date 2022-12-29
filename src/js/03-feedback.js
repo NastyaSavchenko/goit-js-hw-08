@@ -10,7 +10,10 @@ const INPUT_KEY = 'feedback-form-state';
 const localString = localStorage.getItem(INPUT_KEY);
 const localObject = JSON.parse(localString);
 
-let formData;
+let formData = {
+  email: '',
+  message: '',
+};
 
 if (localObject) {
   refs.email.value = localObject.email;
